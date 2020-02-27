@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC 
 from selenium.common.exceptions import TimeoutException
 import time
+from datetime import datetime
 
 #ABRIR PAINEL
 option = webdriver.ChromeOptions()
@@ -55,6 +56,21 @@ selecionar_todos_clientes = browser.find_elements_by_xpath('//*[@id="costumers_l
 selecionar_todos_clientes.click()
 abrir_dropdown = browser.find_elements_by_xpath('//*[@id="costumers_length"]/label/select')[0]
 abrir_dropdown.click()
+
+time_now = datetime.now()
+timestamp2 = browser.find_elements_by_xpath('//*[@id="1742992"]/td[7]/span')
+
+latest = max((datetime, timestamp2))
+
+# t1 = datetime.strptime(time_now, "%b %d %H:%M:%S %Y")
+# t2 = datetime.strptime(timestamp2, "%b %d %H:%M:%S %Y")
+
+# difference = t1 - t2
+
+# print(difference.days) # 380, in this case
+
+# latest = max((t1, t2)) # t1, in this case
+
 
 
 
