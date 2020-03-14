@@ -2,7 +2,7 @@ import telebot
 import time
 
 
-TOKEN = "1135582247:AAENOwspYcsFKeceYqCdNJu5tpctiES1X8U"
+TOKEN = "TOKEN DADO PELO TELEGRAM"
 bot = telebot.TeleBot(token=TOKEN)
 
 @bot.message_handler(commands=['painel']) # welcome message handler
